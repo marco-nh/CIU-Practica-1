@@ -39,7 +39,6 @@ int menu = 0;
 
 
 void setup() {
-  frameRate(60);
   size(800, 400);
   pos1 = height/2-25;
   pos2 = height/2-25;
@@ -126,7 +125,7 @@ void draw() {
     menu = gui(menu);
   }
   
-  ficherogif.setDelay(1);
+  ficherogif.setDelay(1000/60);
   ficherogif.addFrame();
 }
 
@@ -189,6 +188,7 @@ void mousePressed() {
 void collision(){
   //si la bola toca el jugador, rebota 
   if((cir_x >= 20 && cir_x <= 30) && (cir_y >= pos1 && cir_y <= pos1+50)){
+    cir_x = 30; //evitar sobrecolision
     if(mov_x*1.1 <= 8){
       mov_x = -mov_x*1.1; //mov_x no puede superar 10
     }
@@ -204,6 +204,7 @@ void collision(){
   }
   //jugador 2
   if((cir_x >= width-30 && cir_x <= width-20) && (cir_y >= pos2 && cir_y <= pos2+50)){
+    cir_x = width-30; //evitar sobrecolision
     if(mov_x*1.1 <= 8){
       mov_x = -mov_x*1.1; //mov_x no puede superar 10
     }
@@ -248,7 +249,7 @@ int gui(int menu){
     //texto
     textAlign(CENTER,CENTER);
     textFont(createFont("Verdana",40));
-    text("Ping Pong",width/2,20);
+    text("Pong",width/2,20);
     text("Jugador1",150,height/2-140);
     textFont(createFont("Georgia",20));
     text("W - Arriba",150,height/2-100);
