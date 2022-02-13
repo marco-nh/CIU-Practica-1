@@ -97,6 +97,13 @@ void draw() {
     if (key == 'h' || key == 'H'){
       menu = 0;
     }
+    if (key == ' '){
+      if(menu == 0){
+        sound = "start";
+        thread ("playSound");
+      }
+      menu = 1;
+    }
   }
   
   //pelota en el medio, minipausa
@@ -187,8 +194,8 @@ void mousePressed() {
 
 void collision(){
   //si la bola toca el jugador, rebota 
-  if((cir_x >= 20 && cir_x <= 30) && (cir_y >= pos1 && cir_y <= pos1+50)){
-    cir_x = 30; //evitar sobrecolision
+  if((cir_x >= 10 && cir_x <= 20) && (cir_y >= pos1 && cir_y <= pos1+50)){
+    cir_x = 20.1; //evitar sobrecolision
     if(mov_x*1.1 <= 8){
       mov_x = -mov_x*1.1; //mov_x no puede superar 10
     }
@@ -204,7 +211,7 @@ void collision(){
   }
   //jugador 2
   if((cir_x >= width-30 && cir_x <= width-20) && (cir_y >= pos2 && cir_y <= pos2+50)){
-    cir_x = width-30; //evitar sobrecolision
+    cir_x = width-30.1; //evitar sobrecolision
     if(mov_x*1.1 <= 8){
       mov_x = -mov_x*1.1; //mov_x no puede superar 10
     }
@@ -230,7 +237,7 @@ int gui(int menu){
     rect(width-20,pos2,10,50);
   
     //jugador izquierdo
-    rect(20,pos1,10,50);
+    rect(10,pos1,10,50);
     rect(cir_x, cir_y, 10,10);
     fill(255);
   
@@ -263,13 +270,6 @@ int gui(int menu){
     
     text("Pulsa H para ver los controles",width/2,height-80);
     text("Pulsa espacio para empezar",width/2,height-40);
-    if(keyPressed){
-      if(key == ' '){
-        menu = 1;
-        sound = "start";
-        thread ("playSound");
-      }
-    }
   }
   return menu;
       
