@@ -114,7 +114,7 @@ void rebote(){
   }
 ```
 
-Para los jugadores, si colisionan (su posición en xy coincide con la pelota) cambian de dirección, también cambia su angulo (ver en [Aoortaciones propias](#Aportación))
+Para los jugadores, si colisionan (su posición en xy coincide con la pelota) cambian de dirección, también cambia su angulo (ver en [Aportaciones propias](#Aportaciones-propias))
 
 ### Marcador
 Hecho con rect() se llama desde gui() con el numero y la posición xy del marcador.
@@ -263,6 +263,12 @@ Y a partir del cuanto de lejos del medio estaba, tambien hice que cogiese un ang
       mov_x = -mov_x*1.1; //mov_x no puede superar 10
     } else{
       mov_x = -mov_x;
+    }
+ ```
+ Junto con su velocidad, el color de la pelota se va volviendo rojo con cada golpe hasta tener el rojo completo (255,0,0)
+ ```
+ if(col-5 > 0){
+      col-= 15;
     }
  ```
 **Movimiento inicial aleatorio**
