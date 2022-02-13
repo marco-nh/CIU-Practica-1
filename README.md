@@ -9,7 +9,7 @@ Creado por Marco Nehuen Hernández Abba
 
 
 ### Trabajo realizado
-***FastPong es una variante del Pong en el que la posición y la velocidad del jugador es importante***
+***FastPong es una variante del Pong en el que la posición y la velocidad del jugador es importante ya que la partida se hace más rapida hasta que se marque 1 punto***
 
 Se describe según los objetivos propuestos dentro de la tarea pedida.
 
