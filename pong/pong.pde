@@ -24,6 +24,8 @@ float pos2 = 10;
 boolean[] tecla = new boolean[4];
 //timeout (cuando marca punto)
 float tiempo = 30;
+//color
+float col = 255;
 
 boolean stop = false;
 
@@ -66,7 +68,6 @@ void draw() {
     //movimiento
     cir_x = cir_x + mov_x;
     cir_y = cir_y + mov_y + ang;
-  
     menu = gui(menu);
     rebote();
     collision();
@@ -205,9 +206,11 @@ void mousePressed() {
 
 void collision(){
   //si la bola toca el jugador, rebota 
-  if((cir_x >= 0 && cir_x-mov_x <= 20) && (cir_y >= pos1 && cir_y <= pos1+50)){
-    
-    if(mov_x*1.1 <= 10){
+  if((cir_x >= 10 && cir_x <= 20) && (cir_y >= pos1 && cir_y <= pos1+50)){
+    if(col-5 > 0){
+      col-= 15;
+    }
+    if(mov_x*1.1 <= 8){
       mov_x = -mov_x*1.1; //mov_x no puede superar 10
     } else{
       mov_x = -mov_x;
@@ -225,7 +228,10 @@ void collision(){
   }
   //jugador 2
   if((cir_x >= width-30 && cir_x <= width) && (cir_y >= pos2 && cir_y <= pos2+50)){
-   if(mov_x*1.1 <= 10){
+    if(col-5 > 0){
+      col-= 15;
+    }
+    if(mov_x*1.1 <= 8){
       mov_x = -mov_x*1.1; //mov_x no puede superar 10
     } else{
       mov_x = -mov_x;
@@ -254,9 +260,14 @@ int gui(int menu){
   
     //jugador izquierdo
     rect(10,pos1,10,50);
+    
+    
+    //bola
+    stroke(255,col,col);
+    fill(255,col,col);
     rect(cir_x, cir_y, 10,10);
     fill(255);
-  
+    stroke(255);
     //marcador 1
     marcador(marc1,40,25);
     
@@ -274,7 +285,7 @@ int gui(int menu){
     //texto
     textAlign(CENTER,CENTER);
     textFont(createFont("Verdana",40));
-    text("Pong",width/2,20);
+    text("FastPong",width/2,20);
     text("Jugador1",150,height/2-140);
     textFont(createFont("Georgia",20));
     text("W - Arriba",150,height/2-100);
@@ -307,8 +318,8 @@ void rebote(){
     cir_y = random(height);
     stop = true;
     mov_x = 0;
-    
-    //println("derecha");
+    col = 255;
+    //printn("derecha");
     sound = "start";
     thread ("playSound");
   }
