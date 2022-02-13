@@ -21,7 +21,7 @@ Inicialmente se comentará la interfaz visual
 ### Interfaz
 
 
-![image](https://user-images.githubusercontent.com/47418876/153771502-5a02c722-1d4d-4189-98f8-43160629ac99.png)
+![image](https://user-images.githubusercontent.com/47418876/153778107-790ee6a4-1f54-43e0-8cac-33c4fd57658a.png)
 ![image](https://user-images.githubusercontent.com/47418876/153775533-ea933764-8122-44fe-8c6d-38c4d1a22ef8.png)
 ![image](https://user-images.githubusercontent.com/47418876/153775545-ebbbda7e-a34d-46dd-9c2d-a7066a4e61c7.png)
 
