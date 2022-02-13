@@ -242,10 +242,12 @@ int gui(int menu){
     fill(255);
   
     //marcador 1
-    marcador(marc1,width-70,25);
+    marcador(marc1,40,25);
     
     //marcador 2
-    marcador(marc2,40,25);
+    marcador(marc2,width-70,25);
+    
+    
     
     //angulo, movimiento (debug)
     //textFont(createFont("Verdana",10));
@@ -295,8 +297,8 @@ void rebote(){
     thread ("playSound");
   }
   //hacia abajo
-  if(cir_y > height) {
-    cir_y = height;
+  if(cir_y >= height-10) {
+    cir_y = height-10;
     mov_y = -mov_y;
     ang = -ang;
     //println("abajo");
