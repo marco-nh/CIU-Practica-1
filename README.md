@@ -1,4 +1,4 @@
-# Memoria Practica 1 CIU - Pong
+# Memoria Practica 1 CIU - FastPong
 Creado por Marco Nehuen Hernández Abba
 
 ![](animaciona.gif)
@@ -9,9 +9,7 @@ Creado por Marco Nehuen Hernández Abba
 
 
 ### Trabajo realizado
-***Es un Pong con un menu inicial que describe los controles, si se pulsa espacio se accede al juego, con la bola en el medio, los dos jugadores se mueven
-para hacer rebotar esa pelota que se mueve a los lados, al que se le escape por los extremos hará que su contrincante gane 1 punto, a los 3 puntos gana.
-Para acceder a los controles desde el juego se pulsa H.***
+***FastPong es una variante del Pong en el que la posición y la velocidad del jugador es importante***
 
 Se describe según los objetivos propuestos dentro de la tarea pedida.
 
