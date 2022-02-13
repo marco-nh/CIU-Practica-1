@@ -239,10 +239,10 @@ int gui(int menu){
     //marcador 2
     marcador(marc2,40,25);
     
-    //angulo, movimiento
-    textFont(createFont("Verdana",10));
-    text(ang,cir_x,cir_y+10);
-    text(mov_x,cir_x,cir_y+20); 
+    //angulo, movimiento (debug)
+    //textFont(createFont("Verdana",10));
+    //text(ang,cir_x,cir_y+10);
+    //text(mov_x,cir_x,cir_y+20); 
     
   } else {
     //texto
