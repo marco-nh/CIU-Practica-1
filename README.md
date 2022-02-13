@@ -1,7 +1,6 @@
 # Memoria Practica 1 CIU - Pong
 Creado por Marco Nehuen Hernández Abba
 
-![](animacion.gif)
 
 ### Contenido
 - Trabajo realizado
