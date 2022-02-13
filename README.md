@@ -146,6 +146,16 @@ Hay tres sonidos en el juego.
 - sounda (rebote pelota con jugador 1)
 - soundb (rebote pelota con jugador 2)
 - start (cada vez que se pasa del menu al juego o cuando se marca punto)
+
+```
+void setup() {
+  ...
+  playera = new SoundFile(this,"sounda.wav");
+  playerb = new SoundFile(this,"soundb.wav");
+  start = new SoundFile(this,"start.wav");
+  ...
+}
+```
 ```
 void playSound(){
   switch (sound) {
@@ -278,3 +288,37 @@ Cuando la bola llega al extremo derecho o izquierdo, se coloca en el medio en un
     tiempo -=1;
   }
 ```
+
+### Herramientas y referencias.
+**Gif Animator**
+
+Para sacar el gif solicitado, con el siguiente codigo, comentado dentro de la practica.
+```
+void setup() {
+  //gif
+  //ficherogif = new GifMaker(this, "animacion.gif");
+  //ficherogif.setRepeat(0);        // anima sin fin
+}
+``` 
+```
+void draw() {
+  ...
+  //ficherogif.setDelay(1000/60);
+  //ficherogif.addFrame();
+  }
+```
+```
+void mousePressed() {
+  //ficherogif.finish();          // Finaliza captura y salva
+}
+```
+El link de descarga puesto en la Práctica no funcionaba, por lo que lo descargué de otro [repositorio](https://github.com/extrapixel/gif-animation/tree/3.0).
+
+**Referencias**
+
+ [Explicación de la practica 1](https://github.com/otsedom/otsedom.github.io/blob/main/CIU/P1/README.md#Introducci%C3%B3n)
+ 
+ [Referencias de Proccesing](https://processing.org/reference/)
+ 
+ [Control simultaneo con keyPressed()](https://discourse.processing.org/t/keypressed-for-multiple-keys-pressed-at-the-same-time/18892)
+ 
